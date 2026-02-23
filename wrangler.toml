@@ -1,6 +1,6 @@
 # wrangler.toml
 name = "read"
-main = "src/index.ts"
+main = "./server/index.js"
 compatibility_date = "2025-10-08"
 compatibility_flags = ["nodejs_compat"]
 upload_source_maps = true
