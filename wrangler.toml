@@ -20,9 +20,12 @@ binding = "AUTH_DB"
 database_name = "readtalk_db"
 database_id = "ff653b9c-4e2c-479d-8aa4-497da62de3c5"
 
-# Variabel environment (non-secret)
-[vars]
-NODE_ENV = "production"
+name = "readtalk-social"
+compatibility_date = "2025-10-08"
+pages_build_output_dir = "build/client"
+
+[build]
+command = "npm run build"
 
 # Environment per environment (opsional)
 [env.production]
