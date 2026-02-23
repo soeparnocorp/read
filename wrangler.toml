@@ -1,13 +1,11 @@
 # wrangler.toml
 name = "read"
-main = "src/_index.ts"
+main = "src/index.ts"
 compatibility_date = "2025-10-08"
 compatibility_flags = ["nodejs_compat"]
-
-# Upload source maps untuk debugging
 upload_source_maps = true
 
-# Observability / logging
+# Observability
 [observability]
 enabled = true
 
@@ -21,3 +19,12 @@ id = "13a468e30cc84fe58ff6297d799050f2"
 binding = "AUTH_DB"
 database_name = "readtalk_db"
 database_id = "ff653b9c-4e2c-479d-8aa4-497da62de3c5"
+
+# Variabel environment (non-secret)
+[vars]
+NODE_ENV = "production"
+
+# Environment per environment (opsional)
+[env.production]
+vars = { NODE_ENV = "production" }
+route = { pattern = "read.soeparnocorp.workers.dev", custom_domain = false }
