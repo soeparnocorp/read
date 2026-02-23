@@ -1,0 +1,23 @@
+# wrangler.toml
+name = "read"
+main = "src/_index.ts"
+compatibility_date = "2025-10-08"
+compatibility_flags = ["nodejs_compat"]
+
+# Upload source maps untuk debugging
+upload_source_maps = true
+
+# Observability / logging
+[observability]
+enabled = true
+
+# KV Namespace untuk session storage
+[[kv_namespaces]]
+binding = "AUTH_STORAGE"
+id = "13a468e30cc84fe58ff6297d799050f2"
+
+# D1 Database untuk user data
+[[d1_databases]]
+binding = "AUTH_DB"
+database_name = "readtalk_db"
+database_id = "ff653b9c-4e2c-479d-8aa4-497da62de3c5"
