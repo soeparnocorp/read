@@ -1,5 +1,5 @@
-import type { MetaFunction } from "@remix-run/node";
-import { redirect } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/cloudflare";
+import { redirect } from "@remix-run/cloudflare";
 
 import Guide from "~/components/Guide";
 import Logo from "~/components/Logo";
